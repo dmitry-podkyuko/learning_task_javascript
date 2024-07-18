@@ -1,0 +1,1 @@
+// напишите свой Promise.all  и Promise.allSettled
