@@ -1,32 +1,30 @@
 ## №1 задание
 Что будет выведено в консоль?
 ```javascript
-setTimeout(() => alert("timeout"));
+setTimeout(() => console.log("timeout"));
 
 Promise.resolve()
-  .then(() => alert("promise"));
+  .then(() => console.log("promise"));
 
-alert("code");
+console.log("code");
 ```
 
 ## №2 задание
 Что будет выведено в консоль?
 ```javascript
-setTimeout(() => alert("timeout"));
+setTimeout(() => console.log("timeout"));
 
 Promise.resolve()
-  .then(() => setTimeout(() => alert("promise")));
+  .then(() => setTimeout(() => console.log("promise")));
 
-alert("code");
+console.log("code");
 ```
 ## №3 задание
 Что будет выведено в консоль?
 ```javascript
-setTimeout(function timeout() {
-  console.log('Таймаут');
-}, 0);
+setTimeout(() => { console.log('Таймаут') }, 0);
 
-let p = new Promise(function (resolve, reject) {
+let p = new Promise((resolve, reject) => {
   console.log('Создание промиса');
   resolve();
 });
@@ -60,7 +58,7 @@ console.log(7);
 ```javascript
 Promise
   .resolve("1")
-  .then(data => console.log(data))
+  .then(console.log)
   .then(data => {
     console.log(data);
     return "2";
@@ -125,7 +123,7 @@ p.then(function () {
 console.log(a);
 ```
 ## №9 задание
-Что будет выведено в консоль?
+Что будет с браузером и почему?
 ```javascript
 function foo() {
   setTimeout(foo, 0);
@@ -134,7 +132,7 @@ function foo() {
 foo();
 ```
 ## №10 задание
-Что будет выведено в консоль?
+Что будет с браузером и почему?
 ```javascript
 function foo() {
   Promise.resolve().then(foo);
@@ -300,7 +298,7 @@ p.then(() => console.log(9))
 
 setTimeout(() => { console.log(5) }, 0)
 ```
-## №15 задание
+## №16 задание
 Что будет выведено в консоль?
 ```javascript
 console.log(1)
@@ -322,7 +320,7 @@ a.then((data) => console.log(data))
 
 console.log(2)
 ```
-## №16 задание
+## №17 задание
 Что будет выведено в консоль?
 ```javascript
 const promise = new Promise((resolve, reject) => {
@@ -343,9 +341,4 @@ promise.then(value => {
 })
 
 let a = 1
-```
-## №16 задание
-Что будет выведено в консоль?
-```javascript
-
 ```
